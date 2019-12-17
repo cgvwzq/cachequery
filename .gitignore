@@ -1,0 +1,12 @@
+# hidden files
+.*
+
+# binary compile stuff
+*.ko
+*.o
+*.mod.c
+modules.order
+Module.symvers
+
+# vscode
+.vscode/
