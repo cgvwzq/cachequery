@@ -51,17 +51,21 @@ $ make install
 
 Current support for `i7-4790`, `i5-6500` (default), and `i7-8550u`. Add header file in `config/` and build with corresponding `make cpu=iX-yyyy`.
 
+### Create new config file
+
+The main parameters required for building a new config file are the cache associativity (`L?_CACHE_WAYS`), the number of set index bits (`L?_SET_BITS`), and the number of bits used for slicing (`L?_SLICE_BITS`). The associativity (or ways) and number of cache sets can be obtained with the `cpuid` command, although the sets need to be divided by the number of slices. Slices are not documented and might require manual inference, but for post-Skylake Intel machines seems to be `8`.
+
+We recommend the default values (copy an existent file) for everything else, and manually tune them if required.
+
+Initially we recommend to use the automatic calibration for the thresholds, perform some test runs, and check the computed threshold from the system logs. Once we are confident with the threshold, we can set it statically in the config file or dynamically via the virtual file system.
+
+
 ## Dependencies
 
 Lark parser: `pip3 install lark-parser`
 
 LevelDB + Plyvel: https://plyvel.readthedocs.io/en/latest/installation.html
 
-
-# Uninstall
-```
-$ make uninstall
-```
 
 ## Help:
 
@@ -92,7 +96,6 @@ Current support for `i7-4790`, `i5-6500` (default), and `i7-8550u`. Add header f
 ```
 $ make uninstall
 ```
-
 
 # MemBlockLang
 
