@@ -1,0 +1,36 @@
+{
+    "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+    "@type": "SoftwareSourceCode",
+    "license": "https://spdx.org/licenses/Apache-2.0",
+    "codeRepository": "https://github.com/cgvwzq/cachequery/",
+    "dateCreated": "2019-12-17",
+    "datePublished": "2019-12-17",
+    "issueTracker": "https://github.com/cgvwzq/cachequery/issues",
+    "name": "CacheQuery",
+    "description": "A tool for interacting with hardware memory caches in modern Intel CPUs.",
+    "developmentStatus": "concept",
+    "referencePublication": "https://doi.org/10.1145/3385412.33860081",
+    "programmingLanguage": [
+        "C",
+        "x86",
+        "Python3"
+    ],
+    "operatingSystem": [
+        "Linux"
+    ],
+    "softwareRequirements": [
+        "lark-parser, LevelDB, Plyvel"
+    ],
+    "author": [
+        {
+            "@type": "Person",
+            "givenName": "Pepe",
+            "familyName": "Vila",
+            "email": "pepe.vila@imdea.org",
+            "affiliation": {
+                "@type": "Organization",
+                "name": "IMDEA Software Institute"
+            }
+        }
+    ]
+}
