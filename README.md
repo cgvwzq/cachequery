@@ -1,4 +1,5 @@
 # CacheQuery
+[![DOI](https://zenodo.org/badge/227137498.svg)](https://zenodo.org/badge/latestdoi/227137498)
 
 A tool for interacting with hardware memory caches in modern Intel CPUs.
 
